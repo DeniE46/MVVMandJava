@@ -1,7 +1,7 @@
 package com.denie.mvvmandjava;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import java.util.List;
@@ -26,7 +26,7 @@ public class NoteRepository {
     }
 
     void delete(Note note){
-        new DeleteAllNotesAsync(noteDao).execute(note);
+        new DeleteNotesAsync(noteDao).execute(note);
     }
 
     void deleteAllNotes(){
